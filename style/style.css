@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff6ebd;
+}
+
+.navigationBar {
+  margin-left: 11rem;
+}
+
+li {
+  list-style: none;
+  float: left;
+  align-self: center;
+  margin: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.page_logo {
+  margin: 0.5em;
+}
+
+.section_One {
+  display: flex;
+  justify-content: space-between;
+  background-color: thistle;
+  background-image: linear-gradient(to right, thistle, #ff6ebd);
+}
+.photoOfMine {
+  margin-top: -2em;
+}
+.rightSide_1 {
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.H {
+  color: #4f0e0e;
+}
+
+.e {
+  color: #bb8760;
+}
+
+.l1,
+#Greeting {
+  color: #4f0e0e;
+}
+
+.l2 {
+  color: #ffdada;
+}
+
+.o {
+  color: #fff1f1;
+}
+
+.Web_designer,
+.developer {
+  border-radius: 7%;
+}
+
+.Web_designer {
+  border: 2px solid #4f0e0e;
+  background-image: linear-gradient(80deg, #ffdada, #ff6ebd);
+}
+
+.developer {
+  border: 2px solid #4f0e0e;
+  background-image: linear-gradient(80deg, #ff6ebd, #bb8760);
+}
+
+.section_Two {
+  display: flex;
+  justify-content: space-between;
+  background-color: thistle;
+  background-image: url("../images/Background_Image/CherryBackground.jpg");
+}
+
+.leftSide_2 {
+  width: 400px;
+  height: 250px;
+  margin: 1rem 5rem;
+  background-image: linear-gradient(180deg, #cfc9d4, #e4e0de);
+}
+
+.aboutMe {
+  font-family: "Righteous", cursive;
+  color: #4f0e0e;
+}
+
+.rightSide_2 {
+  margin: auto;
+}
+
+.section_Three {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(thistle, #ff6ebd, thistle);
+  padding: 2em;
+}
+
+.leftSide_3,
+.rightSide_3 {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.section_Four {
+  text-align: center;
+  font-size: 1.4em;
+  background-image: linear-gradient(to left, thistle, white);
+}
+
+.handworks {
+  width: 170px;
+  height: 120px;
+  margin: auto;
+  border: 5px solid white;
+  border-radius: 7px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  background-color: #ff6ebd;
+  color: #000;
+  padding: 1rem;
+  font-size: 1rem;
+  background-image: linear-gradient(#4f0e0e, #ff6ebd, #4f0e0e);
+}
+
+h3 {
+  padding: 7px;
+  color: #4f0e0e;
+}
+
+.leftSide_5 {
+  margin: 1.2rem;
+}
+
+.centerSide_5 {
+  margin-left: 8rem;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .section_One,
+  .section_Three {
+    flex-direction: column;
+  }
+}
