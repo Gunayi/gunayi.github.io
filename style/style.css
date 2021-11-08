@@ -43,6 +43,8 @@ a {
 }
 .photoOfMine {
   margin-top: -2em;
+  width: 35.625rem;
+  height: 31.25rem;
 }
 .rightSide_1 {
   text-align: center;
@@ -147,7 +149,7 @@ footer {
   color: #000;
   padding: 1rem;
   font-size: 1rem;
-  background-image: linear-gradient(#4f0e0e, #ff6ebd, #4f0e0e);
+  background-color: thistle;
 }
 
 h3 {
@@ -165,8 +167,41 @@ h3 {
 }
 
 @media only screen and (max-width: 800px) {
+  
+  .photoOfMine {
+    width: 25rem;
+    height: 20rem;
+  }
+
+  .navigationBar {
+    margin: auto;
+  }
+  
   .section_One,
   .section_Three {
     flex-direction: column;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 0;
+  }
+
+  .leftSide_5,.centerSide_5 {
+    margin: 0;
+  }
+
+  .leftSide_2, .section_One, .section_Two, .section_Three, .section_Four {
+    height: auto;
+  }
+
+  .section_One {
+    height: 30rem;
+  }
+
+  img.changeStaticPicture {
+    display: none;
   }
 }
