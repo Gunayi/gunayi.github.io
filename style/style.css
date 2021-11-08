@@ -116,7 +116,8 @@ h1 {
 
 .section_Three {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: auto;
   background-image: linear-gradient(thistle, #ff6ebd, thistle);
   padding: 2em;
 }
