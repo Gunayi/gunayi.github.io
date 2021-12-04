@@ -255,6 +255,7 @@ input:checked + .nightLight:before {
   text-align: center;
   font-size: 1.4em;
   background-color: #000;
+  margin-bottom: 2rem;
 }
 
 .rightSide_4 {
