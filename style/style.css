@@ -238,7 +238,7 @@ input:checked + .nightLight:before {
 }
 
 .videoSkills {
-  width: 1500px;
+  width: 1200px;
   height: 400px;
   left: 50%;
   margin-bottom: 40px;
@@ -381,7 +381,7 @@ h5 {
   }
 
   .videoSkills {
-    width: 300px;
+    width: 370px;
     height: 200px;
     left: 50%;
     margin: auto;
