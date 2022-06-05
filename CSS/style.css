@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=MuseoModerno:wght@200&family=Righteous&display=swap');
+
+/* 🎯for All */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration-line: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'MuseoModerno', cursive;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    visibility: visible;
+}
+
+.loader {
+    content: url(/images/LoadingGif/loading.gif);
+    width: 20px;
+    height: 20px;
+    background-color: #022430;
+    /* display: block; */
+    display: none;
+}
+
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+body.dark a{
+    color: #fff;
+}
+body.dark .titleOfMySertification {
+    text-decoration-color: #fff;
+}
+
+body.chinese {
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: lighter;
+}
+
+.revealSections {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 2s ease;
+}
+.activeReveal {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+/* ******************************************************** */
+
+/* 🎯‘TOP-SIDE NAVIGATION’ Bar */
+/* **👩‍💻for general */
+.topNavBar {
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'headerCenter headerCenter headerCenter headerCenter headerRight headerRight headerRight';
+    padding: 10px;
+}
+.topNavBar > div {
+    text-align: right;
+    align-self: center;
+}
+/* 🔻Top 'CENTER NAVIGATION' ~~LINKS */
+.centerNav {
+    grid-area: headerCenter;
+}
+.centerNav a {
+    color: black;
+    font-weight: 800;
+    padding: 2%;
+}
+.centerNav a:hover {
+    color: #A18254;
+    font-weight: 600;
+    text-shadow: #000 2px 0 4px 0 0;
+}
+.centerNav a:focus {
+    box-shadow: solid 2px #022430;
+}
+/* 🔻Top 'RIGHT NAVIGATION' Change ~~LANGUAGES Links */
+.topRightNavIconsContainer {
+    grid-area: headerRight;
+}
+.topRightNavIcons {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+/* 🔻toggle switch for both of 'Languages' and 'Darktolight' mode */
+/* switchButton */
+.switchButtonLanguages,
+.switchButton {
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    border-radius: 34px;
+}
+/* hide input */
+.switchButtonLanguages input,
+.switchButton input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* set Background */
+.chineseEnglish,
+.darkLight {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #e0b574;
+    box-shadow: inset #000 0 0 1px 0;
+    border-radius: 4px;
+    transition: .4s;
+    -webkit-transition: .4s;
+}
+/* set button */
+.chineseEnglish::before,
+.darkLight:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 20px;
+    left: 2px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.chineseEnglish::before {
+    background-image: url("/images/icons/EnglandFlag.png");
+}
+.darkLight:before {
+    background-color: #022430;
+    border-radius: 50%;
+}
+/* set checked time background color*/
+input:checked + .chineseEnglish,
+input:checked + .darkLight {
+    background-color: #022430;
+}
+input:checked + .chineseEnglish::before {
+    background-image: url("/images/icons/ChinaFlag.png");
+}
+input:checked + .darkLight::before {
+    background-color: #e0b574;
+}
+/* focus color */
+input:focus + .chineseEnglish,
+input:focus + .darkLight {
+    box-shadow: 0 0 1px #022430;
+}
+/* button animation */
+input:checked + .chineseEnglish:before,
+input:checked + .darkLight:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* <!-- LANGUAGES --> */
+.rightNavLanguages {
+    margin-right: .4rem;
+}
+/* <!-- CHECKBOX --> */
+.changePageToDarkOrLightModes {
+    margin-right: 1rem;
+}
+
+
+
+/* ******************************************************** */
+
+/* 🎯BACKGROUND~~~~~ "Who I am & MY PHOTO" section */
+/* **👩‍💻for general */
+.whoIAmSectionAndMyPhoto {
+    height: 29rem;
+    display: grid;
+    grid-template-areas: 
+    'leftIAM leftIAM leftIAM rightIMG rightIMG rightIMG';
+}
+/* 🔻WHO I AM short info*/
+.whoIAM{
+    font-size: 1.5rem;
+    padding: 1rem;
+    grid-area: leftIAM;
+    place-self: center;
+    text-align: center;
+}
+.whoIAM h1 {
+    animation: whoIAMQues 6s linear 0s alternate infinite;
+}
+.whoIAM span {
+    animation: whoIAMAnswer 3.3s ease-in alternate infinite;
+}
+@keyframes whoIAMAnswer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes whoIAMQues {
+    75%,
+    100% {
+      transform: translateX(-20%);
+      left: 100%;
+    }
+    0%,
+    25% {
+      transform: translateX(0%);
+      left: 0%;
+    }
+}
+/* 🔻MY PHOTO */
+.myPortfoiloImage img {
+    width: 24rem;
+    padding-top: 10%;
+    height: 24rem;
+    grid-area: rightIMG;
+    float: right;
+    animation: rotatePhoto 7s infinite;
+}
+@keyframes rotatePhoto{
+    0% {transform: rotateY(60deg);}
+    100% {transform: rotateY(360deg);}
+}
+/* _________________________________________________________ */
+/* 🎯COVERUP~~~~~ with 'LOGO, Avatar, Welcoming' section */
+/* **👩‍💻for general */
+.welcomingSection {
+    background-color: #022430;
+    margin-top: -29em;
+    width: auto;
+    height: 29em;
+    position: relative;
+}
+.welcomingSection:hover {
+    animation-name: coverMoving;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}   
+@keyframes coverMoving {
+    from {top: 0;}
+    to {top: 29em;}
+}
+/* 🔻My Name LOGO */
+.nameLogo img {
+    width: 120px;
+    margin: -47px 2px;
+    position: relative;
+    float: left;
+}
+/* 🔻WELCOME */
+
+/* 🔻MINE ANIMATION AVATAR */
+.animationAvatar img {
+    width: 48rem;
+    padding: 2rem 0 0;
+    display: flex;
+    margin: 0 auto;
+    transition: content 4s ease-in;
+}
+.animationAvatar img:hover {
+    content: url('/images/ProfilePhoto/profileAvatar2.png');
+}
+.animationAvatarChinese img {
+    content: url('/images/ProfilePhoto/profileAvatarChinese.png');
+}
+.animationAvatarChinese img:hover {
+    content: url('/images/ProfilePhoto/profileAvatarChinese2.png');
+}
+
+
+/* ******************************************************** */
+
+/* 🎯BACKGROUND~~~~~ of "About Me" Information section */
+/* **👩‍💻for general~~ Background of ABOUT ME */
+#aboutMe {
+    margin-top: 10rem;
+}
+
+.aboutMeContainer {
+    margin: 3rem;
+    background-size: cover;
+    padding: 10px;
+}
+.aboutMe {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem;
+    text-shadow: #000 1px;
+}
+.aboutMe::after {
+    content: '/>';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.aboutMe::before {
+    content: '<';
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+/* 🔻Title of ABOUT ME*/
+.titleOfAboutMe {
+    font-size: 3em;
+    font-weight:bolder;
+    margin-top: -1.7rem;
+}
+/* 🔻Content of ABOUT ME*/
+
+
+/* ******************************************************** */
+
+/* 🎯My SKILLS and SERTIFICATIONS section */
+/* **👩‍💻for general */
+.skillsANDcertificates {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 10rem 0;
+}
+/* 🔻SKILLS*/
+.contentOfSkills img{
+    width: 34rem;
+    height: 24rem;
+    margin-left: -4rem;
+    transition: 2s ease;
+    font-weight: lighter;
+}
+.contentOfSkills img:hover {
+    content: url('/images/Skills/mySkills2.png');
+    transform: scale(1.1);
+}
+.contentOfSkillsChinese img {
+    content: url('/images/Skills/mySkillsChinese.png');
+}
+.contentOfSkillsChinese img:hover {
+    content: url('/images/Skills/mySkillsChinese2.png');
+}
+/* 🔻SERTIFICATIONS*/
+.mySertificates {
+    width: 50%;
+    font-size: 2.4em;
+}
+.titleOfMySertification {
+    margin-left: 12rem;
+    text-decoration: overline;
+    text-decoration-color: #000;
+}
+.contentOfCertificates img {
+    width: 14rem;
+    transition: all .2s ease-out;
+    box-shadow: #022430 0px 0px 0px 3px;
+}
+.contentOfCertificates img:hover {
+    transform: scale(1.3);
+    box-shadow: #A18254 0px 0px 2px 2px;
+}
+
+
+/* ******************************************************** */
+
+/* 🎯My Handmade Photo GALLERY section */
+/* **👩‍💻for general */
+.handmadePhotoGallery {
+    text-align: center;
+    display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-content:center;
+    flex-wrap:wrap;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20rem 0;
+    background-image: url(/images/Background/Backgroundline.png); 
+    background-repeat: no-repeat;
+    background-position: 50%;   
+}
+.titleOfPhotoGallery {
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+    position: absolute;
+    background-color: #090a0a;
+    border:1px solid #fff;
+    width: 22rem;
+    height: 8rem;
+    margin: 5rem ;
+}
+.imageContainer {
+    width: max-content;
+}
+.imageContainer img {
+    width: 25rem;
+    height: 22rem;
+    margin: .1rem;
+    border: #022430 8px solid;
+}
+.imageContainer img:hover {
+    transform: scale(1.1);
+    border: none;
+}
+.slideImages {
+    display: flex;
+    align-items: center;
+}
+.buttons button {
+    width: 8rem;
+    height: 7rem;
+    font-size: 2em;
+    background-color: #022430;
+    color: #fff;
+    cursor: pointer;
+}
+.buttons button:hover {
+    background-color: #A18254;
+    box-shadow: inset #000 0px 0px 3px 0px;
+    font-size: 2.4em;
+}
+
+
+/* ******************************************************** */
+
+/* 🎯Curriculum Vitae- CV Download section */
+/* **👩‍💻for general */
+.myCurriculumVitae {
+    margin: 11rem 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+.explainSectionCVContent a {
+    color: #000;
+    justify-content: center;
+}
+.downloadIcon {
+    width: 4rem;
+    margin-bottom: -1rem;
+}
+
+
+/* ******************************************************** */
+
+/* 🎯BOTTOM-SIDE MAVIGATION Bar */
+/* **👩‍💻for general */
+.bottomeNavBar {
+    background-color: #022430;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: .9em;
+    color: #fff;
+}
+/* 🔻scroll to UP link */
+.scrollToUp a {
+    text-decoration: none;
+    color: #fff;
+}
+/* 🔻All rights reserved */
+.pageRights {
+    margin-left: 12%;
+}
+/* 🔻My Contact Informations */
+.myContactInformation img {
+    width: 1.7rem;
+    float: right;
+    margin: 0 .4rem;
+    background-color: #fff;
+    border-radius: 4px;
+}
