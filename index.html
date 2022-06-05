@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="/JAVASCRIPT/script.js"></script>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Gunay Humbatova's Portfoilo</title>
+</head>
+<body>
+    <div id="root">
+
+        <!-- 🟡 TOP-SIDE NAVIGATION Bar -->
+        <div id="home" class="topNavBar"> 
+            <!-- Top 'CENTER NAVIGATION' ~~LINKS -->
+            <div class="centerNav">
+                <a id="navBar" href="#home">Home</a>
+                <a id="navBar" href="#aboutMe">About</a>
+                <a id="navBar" href="#skills">Skills</a>
+                <a id="navBar" href="#contact">Contact</a>
+            </div>
+            <!-- Top 'RIGHT NAVIGATION' ~~~~~~Change LANGUAGES and LIGHT -->
+            <div class="topRightNavIconsContainer">
+                <div class="topRightNavIcons">
+                    <!-- LANGUAGES button-->
+                    <div class="rightNavLanguages">
+                        <label class="switchButtonLanguages">
+                            <input id="changeLanguagesbutton" type="checkbox"/>
+                            <span class="chineseEnglish"></span>
+                        </label>                        
+                    </div>
+                    <!-- 'CHECKBOX' to LIGHT-DARK -->
+                    <div class="changePageToDarkOrLightModes">
+                        <label class="switchButton">
+                            <input id="changeLightsbutton" type="checkbox"/>
+                            <span class="darkLight"></span>
+                        </label>
+                    </div>  
+                </div>  
+            </div>      
+    </div>
+
+        <!-- 🟡 BACKGROUND~~~~~ "Who I am & MY PHOTO" section-->
+        <div class="whoIAmSectionAndMyPhoto">
+            <!-- WHO I AM short info-->
+            <div class="whoIAM">
+                <h1>Who I am ?</h1>
+                <span>I am a Web Designer & Frontend Developer</span>
+            </div>
+            <!-- MY PHOTO -->
+            <div class="myPortfoiloImage">
+                <img src="/images/ProfilePhoto/profileAvatar.jpg" alt="">
+            </div>
+        </div>
+        <!-- 🟨 COVERUP~~~~~ with 'LOGO, Avatar, Welcoming' section -->
+        <div class="welcomingSection">
+            <!-- My Name LOGO -->
+            <div class="nameLogo">
+                <img src="/images/Logo/logom.png" alt="logo">
+            </div>
+            <!-- MINE ANIMATION AVATAR -->
+            <div class="animationAvatar">
+                <img src="/images/ProfilePhoto/profileAvatar.png" alt=""/>
+            </div>
+        </div>
+
+        <!-- 🟡 "About Me" Information section -->
+        <div id="aboutMe" class="aboutMeContainer revealSections">
+            <div class="aboutMe">
+                <!-- Title of ABOUT ME -->
+                <div class="titleOfAboutMe">
+                    <h3>about me</h3>
+                </div> 
+                <!-- Content of ABOUT ME -->
+                <div class="contentOfAboutMe">
+                    <h4>
+                        My name is Gunay, I am a Web designer and a Frontend developer.
+                        I like to create interesting, 
+                        high quality and remarkable designs by combining people's dreams 
+                        with my own imagination. At the same time, 
+                        I like to find solutions for logistics issues,
+                        which is another aspect of my job that I love.
+                        HTML, CSS, JavaScript are my best friends 
+                        which help I can develop new things in all these subjects.
+                        At the same time, I usually prefer to design logos,
+                        background images and other visual types that I need myself.
+                        Therefore, I also know well how to use Photoshop and other
+                        image design frameworks.
+                    </h4>
+                </div>
+            </div> 
+        </div>
+            
+
+        <!-- 🟡🟡SKILLS & SERTIFICATIONS together -->
+        <div id="skills" class="skillsANDcertificates revealSections">
+            <!-- My SKILLS section -->
+            <div class="skills">
+                <div class="contentOfSkills">
+                    <img src="/images/Skills/mySkills.png" alt="bootstrap"/>
+                </div>
+            </div>
+
+            <!-- My SERTIFICATIONS section -->
+            <div class="mySertificates">
+                <div class="titleOfMySertification">
+                    <h3>My certifications</h3>
+                </div>
+                <div class="contentOfCertificates">
+                    <img class="certificates4" src="/images/Certificates/1636376356446.jpg" alt="certificates4" />
+                    <img class="certificates1" src="/images/Certificates/1636376289129.jpg" alt="certificates1" />
+                    <img class="certificates3" src="/images/Certificates/1636376356622.jpg" alt="certificates3" />
+                    <img class="certificates2" src="/images/Certificates/1636376356557.jpg" alt="certificates2" />
+                </div>
+            </div>            
+        </div>
+
+
+        <!-- 🟡 My Handmade Photo GALLERY section -->
+        <div class="handmadePhotoGallery revealSections">
+            <div class="titleOfPhotoGallery">
+                <h3>My Handworks' Photo Gallery</h3>
+            </div>
+            <div class="contentOfPhotoGallery">
+                <div class="slideImages">
+                    <div class="buttons">
+                        <button id="previous">⋘</button>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="handworksPhotos" src="/images/handmadeGallery/Picture1.jpg" alt="my handworks Photo Gallery" />  
+                        <p id="picturesInformation"></p>
+                    </div>
+                    <div class="buttons">
+                        <button id="next">⋙</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- 🟡 Curriculum Vitae- CV Download section -->
+         <div class="myCurriculumVitae revealSections">
+            <!-- explain Section -->
+            <div class="explainSectionCVContent">
+                <!-- check and download CV -->
+                <a href="/images/Resume/Profile.pdf" target="_self"> <span> Check my Resume/CV </span> <img class="downloadIcon" src="/images/icons/download.png" alt="download icon"></a>
+            </div>
+        </div>
+        
+        <!-- 🟡 BOTTOM-SIDE MAVIGATION Bar -->
+        <div class="bottomeNavBar">
+            <!-- scroll to UP link -->
+            <div class="scrollToUp">
+                <a href="#home"><h3>↑ Up</h3></a>
+            </div>
+            <!-- All rights reserved -->
+            <div class="pageRights">
+                <h3>© 2021. All rights reserved</h3>
+            </div>
+            <!-- My Contact Informations -->
+            <div id="contact" class="myContactInformation">
+                <div class="titleOfContactInformation">
+                    <h3>My Contact informations:</h3>
+                </div>
+                <div class="contentOfmyContactInformations">
+                    <a href="https://github.com/Gunayi"><img class="contactIcons" src="/images/icons/github.png" alt=""></a>
+                    <a href="https://linkedin.com/mwlite/in/gunay-humbatova-5199b11a4"><img class="contactIcons" src="/images/icons/linkedin.png" alt=""></a>
+                    <a href="mailto:gunayhumbetova1@gmail.com"><img class="contactIcons" src="/images/icons/mail.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- loader -->
+        <p class="loader"></p>
+    </div>
+</body>
+</html>
