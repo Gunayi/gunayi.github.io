@@ -259,8 +259,8 @@ input:checked + .darkLight:before {
 }
 /* 🔻My Name LOGO */
 .nameLogo img {
-    width: 120px;
-    margin: -47px 2px;
+    width: 6rem;
+    margin: -2rem 1rem;
     position: relative;
     float: left;
 }
@@ -490,4 +490,33 @@ input:checked + .darkLight:before {
     margin: 0 .4rem;
     background-color: #fff;
     border-radius: 4px;
+}
+
+
+/* ******************************************************** */
+/* 🎯 MEDIAS FOR SCREEN SIZE*/
+@media only screen and (max-width: 950px) {
+    #aboutMe {
+        margin-top: 1rem;
+    }
+    .aboutMeContainer {
+        margin: .1rem;
+        padding: 10px;
+    }
+    .aboutMe {
+        padding: 0;
+        width: 500px;
+    }
+
+    .skillsANDcertificates {
+        flex-direction: column;
+    }
+    .mySertificates {
+        margin-top: 11rem;
+    }
+    .titleOfMySertification {
+        text-align: center;
+        display: block;
+        margin: 0 0 2rem;
+    }
 }
