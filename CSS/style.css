@@ -22,12 +22,31 @@ body {
 }
 
 .loader {
-    content: url(/images/LoadingGif/loading.gif);
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100vh;
     background-color: #022430;
-    /* display: block; */
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+}
+
+.loader img {
+    width: 11rem;
+}
+
+.loader.hidden {
+    animation: fade forwards;
+}
+
+@keyframes fade {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 body.dark {
@@ -40,6 +59,9 @@ body.dark a{
 body.dark .titleOfMySertification {
     text-decoration-color: #fff;
 }
+body.dark #aboutMe {
+    background-color: #000;
+}
 
 body.chinese {
     font-family: Helvetica, Arial, Sans-Serif;
@@ -50,7 +72,7 @@ body.chinese {
     position: relative;
     opacity: 0;
     transform: translateY(100px);
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 .activeReveal {
     transform: translateY(0px);
@@ -125,7 +147,7 @@ body.chinese {
     right: 0;
     bottom: 0;
     position: absolute;
-    background-color: #e0b574;
+    background-color: #022430;
     box-shadow: inset #000 0 0 1px 0;
     border-radius: 4px;
     transition: .4s;
@@ -147,24 +169,24 @@ body.chinese {
     background-image: url("/images/icons/EnglandFlag.png");
 }
 .darkLight:before {
-    background-color: #022430;
+    background-color: #e0b574;
     border-radius: 50%;
 }
 /* set checked time background color*/
 input:checked + .chineseEnglish,
 input:checked + .darkLight {
-    background-color: #022430;
+    background-color: #e0b574;
 }
 input:checked + .chineseEnglish::before {
     background-image: url("/images/icons/ChinaFlag.png");
 }
 input:checked + .darkLight::before {
-    background-color: #e0b574;
+    background-color: #022430;
 }
 /* focus color */
 input:focus + .chineseEnglish,
 input:focus + .darkLight {
-    box-shadow: 0 0 1px #022430;
+    box-shadow: 0 0 1px #e0b574;
 }
 /* button animation */
 input:checked + .chineseEnglish:before,
@@ -244,9 +266,9 @@ input:checked + .darkLight:before {
     height: 29em;
     position: relative;
 }
-.welcomingSection:hover {
+.welcomingSectionClick {
     animation-name: coverMoving;
-    animation-duration: 7s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }   
 @keyframes coverMoving {
@@ -260,7 +282,6 @@ input:checked + .darkLight:before {
     position: relative;
     float: left;
 }
-/* 🔻WELCOME */
 
 /* 🔻MINE ANIMATION AVATAR */
 .animationAvatar img {
@@ -286,9 +307,78 @@ input:checked + .darkLight:before {
 /* 🎯BACKGROUND~~~~~ of "About Me" Information section */
 /* **👩‍💻for general~~ Background of ABOUT ME */
 #aboutMe {
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
+    background-color: #fff;
+    margin-top: -2rem;
+    padding: 10rem 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+.aboutMeContainer {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    animation: animateWritter 5s linear infinite;
+}
+@keyframes animateWritter {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.aboutMeContainer span {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #ffffff00;
+}
+
+.aboutMeContainer span::before {
+    padding: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 10%;
+    background: red;
+    /* border-radius: 50%; */
+    transform: scale(0);
+    transition: 2s;
+    box-shadow: 0 0 50px 20px red,
+                0 0 100px 20px red,
+                0 0 150px 20px red,
+                0 0 200px 20px red,
+                0 0 250px 20px red,
+                0 0 300px 20px red;
+}
+
+.aboutMeContainer span:hover:before {
+    transform: scale(1);
+    transition: 0s;
+}
+
+/* 🔻Title of ABOUT ME*/
+.titleOfAboutMe {
+    font-size: 3em;
+    font-weight:bolder;
+    margin-top: -1.7rem;
+}
+/* 🔻Content of ABOUT ME*/
 .aboutMeContainer {
     margin: 3rem;
     background-size: cover;
@@ -300,6 +390,8 @@ input:checked + .darkLight:before {
     text-align: center;
     padding: 4rem;
     text-shadow: #000 1px;
+    position: fixed;
+    background: #ffffff00;
 }
 .aboutMe::after {
     content: '/>';
@@ -313,13 +405,6 @@ input:checked + .darkLight:before {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
 }
-/* 🔻Title of ABOUT ME*/
-.titleOfAboutMe {
-    font-size: 3em;
-    font-weight:bolder;
-    margin-top: -1.7rem;
-}
-/* 🔻Content of ABOUT ME*/
 
 
 /* ******************************************************** */
@@ -342,6 +427,7 @@ input:checked + .darkLight:before {
     margin-left: -4rem;
     transition: 2s ease;
     font-weight: lighter;
+    position: relative;
 }
 .contentOfSkills img:hover {
     content: url('/images/Skills/mySkills2.png');
@@ -492,9 +578,6 @@ input:checked + .darkLight:before {
 /* ******************************************************** */
 /* 🎯 MEDIAS FOR SCREEN SIZE*/
 @media only screen and (max-width: 950px) {
-    #aboutMe {
-        margin-top: 1rem;
-    }
     .aboutMeContainer {
         margin: .1rem;
         padding: 10px;

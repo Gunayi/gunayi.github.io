@@ -1,21 +1,19 @@
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"
+})
+
+
+
+
 window.onload = function() {
-    // 🎭 <!-- FOR LOADING PAGE -->
-    document.onreadystatechange = function() {
-        if (document.readyState !== "complete") {
-            document.querySelector("body").style.visibility = "hidden";
-            document.querySelector("loader").style.display = "block";
-        } else {
-            document.querySelector("body").style.visibility = "visible";
-            document.querySelector("loader").style.display = "none";            
-        }
-    }
-    
     // 🎭 <!-- FOR Change Light to Dark -->
     const changeLightsbutton = document.getElementById('changeLightsbutton');
     changeLightsbutton.addEventListener('change',()=>{
         // change theme
         document.body.classList.toggle('dark');
     });
+
 
 
     // 🎭 <!-- FOR Change languages -->
@@ -170,4 +168,16 @@ function reveal(){
                 reveals[index].classList.remove('activeReveal');
         }
     }    
+}
+
+
+
+//  🎭 <!-- FOR COVER ANIMATION SECTION -->
+const welcomingSection = document.getElementsByClassName('welcomingSection');
+function welcomingSectionClick () {
+    welcomingSection[0].classList.toggle('welcomingSectionClick');
+}
+const whoIAmSectionAndMyPhoto = document.getElementsByClassName('whoIAmSectionAndMyPhoto');
+function welcomingSectionTurnBackClick () {
+    welcomingSection[0].classList.remove('welcomingSectionClick');
 }

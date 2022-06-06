@@ -10,7 +10,9 @@
 </head>
 <body>
     <div id="root">
-
+        <div class="loader">
+            <img src="/images/LoadingGif/loading.gif" alt="Loading..">
+        </div>
         <!-- 🟡 TOP-SIDE NAVIGATION Bar -->
         <div id="home" class="topNavBar"> 
             <!-- Top 'CENTER NAVIGATION' ~~LINKS -->
@@ -42,7 +44,7 @@
     </div>
 
         <!-- 🟡 BACKGROUND~~~~~ "Who I am & MY PHOTO" section-->
-        <div class="whoIAmSectionAndMyPhoto">
+        <div onclick="welcomingSectionTurnBackClick()" class="whoIAmSectionAndMyPhoto">
             <!-- WHO I AM short info-->
             <div class="whoIAM">
                 <h1>Who I am ?</h1>
@@ -54,7 +56,7 @@
             </div>
         </div>
         <!-- 🟨 COVERUP~~~~~ with 'LOGO, Avatar, Welcoming' section -->
-        <div class="welcomingSection">
+        <div onclick="welcomingSectionClick()" class="welcomingSection">
             <!-- My Name LOGO -->
             <div class="nameLogo">
                 <img src="/images/Logo/logom.png" alt="logo">
@@ -67,6 +69,22 @@
 
         <!-- 🟡 "About Me" Information section -->
         <div id="aboutMe" class="aboutMeContainer revealSections">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+
             <div class="aboutMe">
                 <!-- Title of ABOUT ME -->
                 <div class="titleOfAboutMe">
@@ -170,7 +188,6 @@
             </div>
         </div>
         <!-- loader -->
-        <p class="loader"></p>
     </div>
 </body>
 </html>
