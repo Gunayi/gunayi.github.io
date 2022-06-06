@@ -11,7 +11,7 @@ window.onload = function() {
     const changeLightsbutton = document.getElementById('changeLightsbutton');
     changeLightsbutton.addEventListener('change',()=>{
         // change theme
-        document.body.classList.toggle('dark');
+        document.body.classList.toggle('light');
     });
 
 
