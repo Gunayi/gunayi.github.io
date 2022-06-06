@@ -229,15 +229,11 @@ input:checked + .darkLight:before {
 .myPortfoiloImage img {
     width: 24rem;
     padding-top: 10%;
-    height: 24rem;
+    height: 22rem;
     grid-area: rightIMG;
     float: right;
-    animation: rotatePhoto 7s infinite;
 }
-@keyframes rotatePhoto{
-    0% {transform: rotateY(60deg);}
-    100% {transform: rotateY(360deg);}
-}
+
 /* _________________________________________________________ */
 /* 🎯COVERUP~~~~~ with 'LOGO, Avatar, Welcoming' section */
 /* **👩‍💻for general */
