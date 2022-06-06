@@ -342,8 +342,8 @@ input:checked + .darkLight:before {
 .aboutMeContainer span {
     position: relative;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 5rem;
+    height: 5rem;
     background: #ffffff00;
 }
 
@@ -356,7 +356,6 @@ input:checked + .darkLight:before {
     width: 10%;
     height: 10%;
     background: red;
-    /* border-radius: 50%; */
     transform: scale(0);
     transition: 2s;
     box-shadow: 0 0 50px 20px red,
@@ -578,6 +577,9 @@ input:checked + .darkLight:before {
 /* ******************************************************** */
 /* 🎯 MEDIAS FOR SCREEN SIZE*/
 @media only screen and (max-width: 950px) {
+    #aboutMe {
+        padding: 0;
+    }
     .aboutMeContainer {
         margin: .1rem;
         padding: 10px;
