@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90ab3a39.css",
+    "main.js": "/static/js/main.c38f490d.js",
+    "static/media/myPictureDark.png": "/static/media/myPictureDark.1feffcb74b1c7a23593c.png",
+    "static/media/myPicture.png": "/static/media/myPicture.069b5a1a2b465f4e0517.png",
+    "static/media/myChineseCV.pdf": "/static/media/myChineseCV.409fac64f6ee8ea7a2d1.pdf",
+    "static/media/myCV.pdf": "/static/media/myCV.d989f90906362fc7feb1.pdf",
+    "static/media/certifacte1.jpg": "/static/media/certifacte1.ef4e71a7885163fa5cef.jpg",
+    "static/media/certifacte3.jpg": "/static/media/certifacte3.d1815d892fb66d3cce23.jpg",
+    "static/media/myAvatar.png": "/static/media/myAvatar.bdeee97f30c34264173d.png",
+    "static/media/certifacte4.jpg": "/static/media/certifacte4.d74c553dcec33ec9a59f.jpg",
+    "static/media/certifacte2.jpg": "/static/media/certifacte2.95c23f2fe5e9b6981649.jpg",
+    "static/media/calculator.jpg": "/static/media/calculator.9a3d0601fac906f9060b.jpg",
+    "static/media/phoneIcon.png": "/static/media/phoneIcon.ac47198027b78b28f3c2.png",
+    "static/media/phoneIconDark.png": "/static/media/phoneIconDark.cb46b673e4376509ea30.png",
+    "static/media/logoDarkChinese.png": "/static/media/logoDarkChinese.cfa7ec1286d69735c1e9.png",
+    "static/media/workingAnalogies.jpg": "/static/media/workingAnalogies.ad46311ac5dbd6632c3d.jpg",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
+    "index.html": "/index.html",
+    "main.90ab3a39.css.map": "/static/css/main.90ab3a39.css.map",
+    "main.c38f490d.js.map": "/static/js/main.c38f490d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90ab3a39.css",
+    "static/js/main.c38f490d.js"
+  ]
+}
